@@ -166,3 +166,99 @@ legend {
 }
 /* YUI CSS Detection Stamp */
 #yui3-css-stamp.cssreset { display: none; }
+
+/* form */
+    /* デフォルトのスタイルを消して、統一する */
+    input,
+    input[type="search"],
+    input[type="checkbox"],
+    input[type="radio"],
+    button[type="submit"],
+    select,
+    textarea {
+        -webkit-appearance: none;
+        appearance: none;
+        outline: none;
+        border: 1px solid #333333;
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 0;
+        padding: 10px;
+        font-family : inherit;
+        font-size   : 100%;
+        margin-top: 8px;
+    }
+    textarea {
+        resize: none;
+    }
+    label,
+    select {
+        cursor: pointer;
+        width: 100%;
+    }
+    /* デフォルトのスタイルを消す */
+
+    /* radioボタンとcheckボタンの共通スタイル */
+    input[type="radio"] ,
+    input[type="checkbox"] {
+        position: relative;
+        width: 1em;
+        height: 1em;
+        border: 2px solid #333333;
+        vertical-align: -6px;
+        cursor: pointer;
+    }
+    input[type="checkbox"]::before,
+    input[type="radio"]::before
+    {
+        position: absolute;
+        visibility: hidden;
+    }
+    input[type="checkbox"]:checked::before,
+    input[type="radio"]:checked::before {
+        visibility: visible;
+    }
+    /* // radioボタンとcheckボタンのスタイル */
+
+    /* radioのスタイル */
+    input[type="radio"] {
+        border-radius: 50%;/* radioは丸っこくする */
+    }
+    input[type="radio"]::before {
+        content: "";
+        display: block;
+        font-size: 1.2em;
+        right: 8px;
+        top: 2px;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: blue;/* 選択された時の色 */
+        transform: translate(3px, 3px);
+    }
+    /* // radioのスタイル */
+
+    /* checkのスタイル */
+    input[type="checkbox"]::before {
+        content: "✔︎";
+        color: blue;/* チェックマークの色 */
+        font-size: 1.2em;
+        right: 0;
+        top: -0.3em;
+    }
+    /* // checkのスタイル */
+
+    /* selectのスタイル */
+    .select-wrap {
+        position: relative;
+    }
+    .select-wrap::after {/* selectに擬似要素が適用できないため  */
+        content: "▼";/* selectの▼をリセット */
+        position: absolute;
+        display: block;
+        top: 14px;
+        right: 20px;
+        font-size: 1.6rem;
+    }
+    /* // selectのスタイル */
+/* form */
