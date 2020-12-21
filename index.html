@@ -20,6 +20,43 @@
   <body>
     <h1>Hello, world!</h1>
 
+    <h2>タブパネル</h2>
+    <!-- listタイプ -->
+    <div class="tab-wrap">
+        <ul class="tabs">
+            <li class="tab tab-active" rel="panel1">タブ1</li>
+            <li class="tab" rel="panel2">タブ2</li>
+            <li class="tab" rel="panel3">タブ3</li>
+        </ul><!-- // tabs -->
+        <div class="panels">
+            <p class="panel panel-show" id="panel1">
+                パネルテキスト1 パネルテキスト1 パネルテキスト1 パネルテキスト1 パネルテキスト1 パネルテキスト1 パネルテキスト1 </p>
+            <p class="panel" id="panel2">
+                パネルテキスト2 パネルテキスト2 パネルテキスト2 パネルテキスト2 パネルテキスト2 パネルテキスト2 パネルテキスト2 </p>
+            <p class="panel" id="panel3">
+                パネルテキスト3 パネルテキスト3 パネルテキスト3 パネルテキスト3 パネルテキスト3 パネルテキスト3 パネルテキスト3</p>
+        </div><!-- // panels -->
+    </div><!-- // tab-wrap -->
+    <!-- // listタイプ -->
+
+    <!-- buttonタイプ -->
+    <div class="tab-wrap">
+        <div class="tabs">
+            <button class="tab tab-active" rel="panel4">タブ1</button>
+            <button class="tab" rel="panel5">タブ2</button>
+            <button class="tab" rel="panel6">タブ3</button>
+        </div><!-- // tabs -->
+        <div class="panels">
+            <p class="panel panel-show" id="panel4">
+                パネルテキスト1 パネルテキスト1 パネルテキスト1 パネルテキスト1 パネルテキスト1 パネルテキスト1 パネルテキスト1 </p>
+            <p class="panel" id="panel5">
+                パネルテキスト2 パネルテキスト2 パネルテキスト2 パネルテキスト2 パネルテキスト2 パネルテキスト2 パネルテキスト2 </p>
+            <p class="panel" id="panel6">
+                パネルテキスト3 パネルテキスト3 パネルテキスト3 パネルテキスト3 パネルテキスト3 パネルテキスト3 パネルテキスト3</p>
+        </div><!-- // panels -->
+    </div><!-- // tab-wrap -->
+    <!-- // buttonタイプ -->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
