@@ -1,0 +1,20 @@
+:root {
+    --main-color: #333333;
+    --box-color1: blue;
+    --box-color2: red;
+    --box-color3: skyblue;
+    --box-color4: pink;
+    --box-color5: green;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {/* スマホからタブレットサイズ */
+    
+}
+@media screen and (min-width: 767px) {/* タブレットサイズ以上 */
+    
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {/* タブレットサイズからデスクトップサイズ max-width 指定されているサイズに従う */
+
+}
+@media screen and (min-width: 1280px) {/* 指定されているサイズに従う */
+
+}
