@@ -6,6 +6,24 @@ img {
     vertical-align: bottom;
     object-fit: cover;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* font-sizeの設定 */
+html {
+  font-size: 62.5%;
+  /* rootのfont-sizeを10pxに設定 */
+}
+
+body {
+  font-size: 1.6em;
+  /* 1rem = 10px : body内では指定がなければ、16px */
+}
+
 button {
      background-color: transparent;
      border: none;
