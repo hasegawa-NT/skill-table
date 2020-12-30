@@ -1,4 +1,18 @@
 $(function() {
+
+    /* header */
+    $('.burger-button').on('click', function() {
+        $('.bar').toggleClass('open');
+        $('.header-nav').toggle();/* header-navを表示・非表示 */
+        $('body').toggleClass('no-scroll');/* header-navが開いているときはスクロールしない */
+    });
+    /* リンクをクリックした時の動き */
+    $('.list-item-link').on('click', function() {
+        $('.bar').removeClass('open');
+        $('.header-nav').hide();
+    });
+    /* header */
+
     // // スライドのスピードを変えるための変数。slideイベントのmsを調整する。
 
     //     // 上下のスピードを一定にしたいなら
