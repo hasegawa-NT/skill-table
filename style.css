@@ -1,16 +1,126 @@
 :root {
     --main-color: #333333;
+    --link-color: #ffffff;
     --box-color1: blue;
     --box-color2: red;
     --box-color3: skyblue;
     --box-color4: pink;
     --box-color5: green;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {/* スマホからタブレットサイズ */
-    
+/* header */
+
+/* header-wrap */
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 4vw;/* header-wrap内の要素のpadding */
+    background-color: lightgray;/* 見やすくするための色 */
 }
-@media screen and (min-width: 767px) {/* タブレットサイズ以上 */
+    /* logo-wrap */
+    .logo-wrap {
+        z-index: 20;
+    }
+    /* logo-wrap */
+    /* burger-button */
+    .burger-button {
+        width: 30px;
+        height: 30px;
+        z-index: 20;
+        position: relative;
+        background-color: #fff;/* 見やすくするための色 */
+    }
+    .bar {
+        position: absolute;
+        left: 5px;
+        width: 20px;
+        height: 2px;
+        background-color: var(--main-color);
+    }
+    .bar-top {
+        top: 2px;
+        transition: transform .5s;/* 閉じた時のアニメーション時間 */
+    }
+    .bar-middle {
+        top: 14px;
+        transition: transform .1s;/* 閉じた時のアニメーション時間 */
+    }
+    .bar-bottom {
+        bottom: 2px;
+        transition: transform .5s;/* 閉じた時のアニメーション時間 */
+    }
+    /* header-navが開いた時 */
+    .bar.open.bar-top {
+        transform: rotate(45deg) translate(9px, 9px);
+        transition: transform .5s;
+    }
+    .bar.open.bar-middle {
+        visibility: hidden;
+        transition: visibility .1s;
+    }
+    .bar.open.bar-bottom {
+        transform: rotate(-45deg) translate(8px, -8px);
+        transition: transform .5s;
+    }
+    /* header-navが開いた時 */
+    /* burger-button */
+
     
+
+/* header-wrap */
+
+/* header */
+@media screen and (min-width: 320px) and (max-width: 767px) {/* スマホからタブレットサイズ */
+    /* header-nav */
+    .header-nav {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: var(--box-color3);/* バーガーボタンを押した時のヘッダーリストの背景色 */
+    }
+    .nav-list {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .nav-list-item {
+        margin-bottom: 5vh;
+    }
+    .list-item-link {
+        color: var(--link-color);
+        font-size: 1.6rem;
+    }
+    .no-scroll {
+        overflow: hidden;
+    }
+    /* header-nav */
+}
+@media screen and (min-width: 768px) {/* タブレットサイズ以上 */
+    /* burger-button */
+    .burger-button {
+        display: none;
+    }
+    /* burger-button */
+    /* header-nav */
+    .header-nav {
+        display: block;
+    }
+    
+    .nav-list-item {
+        display: inline-block;
+        margin-right: 1.6rem;
+    }
+    .list-item-link {
+        color: var(--link-color);
+        font-size: 1.6rem;
+    }
+    /* header-nav */
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {/* タブレットサイズからデスクトップサイズ max-width 指定されているサイズに従う */
 
